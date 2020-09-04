@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Top Headlines</string>
+    <string name="API_KEY">add_your_api_key_here</string>
+</resources>

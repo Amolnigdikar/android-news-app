@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_5dp"
+        app:cardElevation="@dimen/dimen_5dp"
+        android:layout_margin="@dimen/dimen_10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/initial_view">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/news_image"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="News Title"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_below="@id/news_image"
+                    android:layout_margin="@dimen/dimen_5dp"
+                    android:id="@+id/news_title"
+                    android:textSize="12sp"/>
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/expanded_view"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:layout_below="@id/initial_view">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/news_description"
+                    android:textSize="10sp"
+                    android:gravity="left"/>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Times of india"
+                android:textColor="@color/indigo"
+                android:id="@+id/source"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:layout_below="@id/expanded_view"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="9/2/2020"
+                android:layout_alignParentRight="true"
+                android:textColor="#000000"
+                android:id="@+id/published_at"
+                android:textSize="10sp"
+                android:layout_below="@id/expanded_view"/>
+
+
+            <ImageView
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:src="@drawable/down_arrow"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/source"
+                android:id="@+id/card_down"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
